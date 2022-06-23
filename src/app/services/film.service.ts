@@ -8,14 +8,10 @@ import { Film } from '../interfaces/film';
 export class FilmService {
 
   private url: string = "https://127.0.0.1:8000/api/films";
-  private headers: HttpHeaders;
 
-  constructor(private http: HttpClient) {
-    const token = localStorage.getItem('tokm2iflix');
-    this.headers = new HttpHeaders().set("Authorization", 'Bearer' + token);
-  }
+  constructor(private http: HttpClient) { }
 
   getAllFilms() {
-    return this.http.get<Array<Film>>(this.url, {headers: this.headers});
+    return this.http.get<Array<Film>>(this.url);
   }
 }
