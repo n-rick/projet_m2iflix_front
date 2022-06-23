@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="col-6 mx-auto">
+        <form #monFormLogin="ngForm" (ngSubmit)="singIn()">
+            <h2 class="h3 mb-3 fw-normal">Inscrivez-vous</h2>
+
+            <div class="form-control">
+                <label for="nom">Nom</label>
+                <input name="nom" type="text" class="form-control" id="nom" [(ngModel)]="user.nom" >
+            </div>
+            <div class="form-control">
+                <label for="prenom">Prenom</label>
+                <input name="prenom" type="text" class="form-control" id="prenom" [(ngModel)]="user.prenom" >
+            </div>
+            <div class="form-control">
+                <label for="email">email</label>
+                <input name="email" type="email" class="form-control" id="email" [(ngModel)]="user.email">
+            </div>
+            <div class="form-control">
+                <label for="password">mot_de_passe</label>
+                <input name="password" type="password" class="form-control" id="password" [(ngModel)]="user.password">
+            </div>
+            <button class="btn btn-lg btn-primary" type="submit">S'inscrire</button>
+        </form>
+    </div>
+</div>
