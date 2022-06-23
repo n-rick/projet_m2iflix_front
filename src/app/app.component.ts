@@ -10,6 +10,6 @@ export class AppComponent {
   
   constructor(private router: Router) {}
   
-  title = 'projet_m2iflix_front';
+  title = 'm2iflix';
   
 }
