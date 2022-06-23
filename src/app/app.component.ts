@@ -7,9 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  constructor(private router: Router) {}
-  
+
   title = 'm2iflix';
-  
+
+  constructor(private router: Router) { }
+
+  //   deconnexion() {
+  //     localStorage.removeItem('tokm2iflix');
+  //     this.router.navigateByUrl('/auth');
+  //   }
 }
