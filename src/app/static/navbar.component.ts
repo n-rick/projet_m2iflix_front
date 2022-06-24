@@ -10,6 +10,7 @@ import { User } from '../interfaces/user';
 export class NavbarComponent implements OnInit {
 
   tokm2iflix = localStorage.getItem('tokm2iflix');
+  usEmail = localStorage.getItem('usEmail');
 
   constructor(private router: Router) { }
 
