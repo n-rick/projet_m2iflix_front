@@ -18,7 +18,6 @@ export class InscriptionComponent implements OnInit {
   }
 
   singIn(){
-    localStorage.setItem('userMail', this.user.email?? "");
     this.us.addNewUser(this.user).subscribe(res => {
       this.route.navigateByUrl('/connexion')
     })

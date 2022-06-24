@@ -12,8 +12,8 @@
             <li><a [routerLink]="['mes-films']" class="nav-link px-2 link-dark">Mes films</a></li>
             <li><a [routerLink]="['a-propos']" class="nav-link px-2 link-dark">A propos</a></li>
         </ul>
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li class="text-decoration-none px-2 link-secondary">Bonjour {{usEmail}}</li>
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" *ngIf="userN">
+            <li class="text-decoration-none px-2 link-secondary">Bonjour {{userN}} {{userP}}</li>
         </ul>
 
         <div class="col-md-3 text-end">

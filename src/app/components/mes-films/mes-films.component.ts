@@ -9,9 +9,10 @@ import { FilmService } from 'src/app/services/film.service';
 })
 export class MesFilmsComponent implements OnInit {
 
-  films = this.fs.getFilm();
-
+  
   constructor(private fs: FilmService) { }
+  
+  films = this.fs.getFilm();
 
   ngOnInit(): void {
   }

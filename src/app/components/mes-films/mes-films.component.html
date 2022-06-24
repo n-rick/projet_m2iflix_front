@@ -1,6 +1,6 @@
 <section class="container">
     <h2 class="text-center text-uppercase">Ma liste de films &agrave; voir</h2>
-    <div class="container px-4 py-5" id="custom-cards">
+    <div class="container px-4 py-5" id="custom-cards" *ngIf="films">
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
             <div class="col" *ngFor="let film of films">
                 <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-4 shadow-lg"
@@ -16,5 +16,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container" *ngIf="!films">
+        <p>Aucun film dans votre bibliothèque</p>
     </div>
 </section>

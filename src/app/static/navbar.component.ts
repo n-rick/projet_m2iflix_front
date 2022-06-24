@@ -10,7 +10,8 @@ import { User } from '../interfaces/user';
 export class NavbarComponent implements OnInit {
 
   tokm2iflix = localStorage.getItem('tokm2iflix');
-  usEmail = localStorage.getItem('usEmail');
+  userN = localStorage.getItem('userN');
+  userP = localStorage.getItem('userP');
 
   constructor(private router: Router) { }
 
@@ -19,6 +20,8 @@ export class NavbarComponent implements OnInit {
   }
   deconnexion() {
     localStorage.removeItem('tokm2iflix');
+    localStorage.removeItem('userN');
+    localStorage.removeItem('userP');
     this.router.navigateByUrl('connexion');
   }
 

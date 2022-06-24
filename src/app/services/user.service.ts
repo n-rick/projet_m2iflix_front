@@ -15,12 +15,12 @@ export class UserService {
   addNewUser(u: User) {
     return this.http.post<User>(this.url, u);
   }
-  
-  getOneUser(id: any) {
-    return this.http.get<User>(`${this.url}/${id}/films`);
+
+  getOneUser(email: any) {
+    return this.http.get<Array<User>>(`${this.url}?email=${email}`);
   }
 
-  showUserFilms(id: any){
+  showUserFilms(id: any) {
     return this.http.get<User>(`${this.url}/${id}/films`);
   }
 }
