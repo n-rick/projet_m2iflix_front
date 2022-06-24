@@ -25,7 +25,7 @@ export class ConnexionComponent implements OnInit {
       next: res => {
         if (res.token != null) {
           localStorage.setItem('tokm2iflix', res.token);
-          this.router.navigateByUrl('/film');
+          this.router.navigateByUrl('/films');
         }
       },
       error: res => {

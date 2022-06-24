@@ -15,8 +15,9 @@ export class AuthInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 
     let authUrl = "https://127.0.0.1:8000/authentication_token";
+    let connexionUrl = "https://127.0.0.1:8000/api/users"
 
-    if (request.url !== authUrl) {
+    if (request.url !== authUrl && request.url != connexionUrl) {
       const tokm2iflix = localStorage.getItem('tokm2iflix');
       request = request.clone({
         setHeaders: {
