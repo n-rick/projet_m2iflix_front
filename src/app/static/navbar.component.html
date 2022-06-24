@@ -14,8 +14,8 @@
         </ul>
 
         <div class="col-md-3 text-end">
-            <button *ngIf="!tokm2iflix" type="button" class="btn btn-outline-primary me-2">Se connecter</button>
-            <button *ngIf="tokm2iflix" type="button" (click)="deconnexion()" class="btn btn-outline-danger me-2">Se déconnecter</button>
+            <a [routerLink]="['/connexion']" *ngIf="!tokm2iflix" type="button" class="btn btn-outline-danger me-2">Se connecter</a>
+            <button *ngIf="tokm2iflix" type="button" (click)="deconnexion()" class="btn btn-outline-info me-2">Se déconnecter</button>
         </div>
     </header>
 </div>
