@@ -1,17 +1,20 @@
-<section class="container">
-    <div class="hero-container" *ngFor="let film of films">
-        <div class="main-container">
-            <div class="poster-container">
-                <a href="#"><img src="{{film.image}}" class="poster" /></a>
-            </div>
-            <div class="ticket-container">
-                <div class="ticket__content">
-                    <h4 class="ticket__movie-title">{{film.titre}}</h4>
-                    <p class="ticket__movie-genre">{{film.genre}}</p>
-                    <p class="ticket__movie-genre">{{film.annee}}</p>
-                    <a class="ticket__add-btn">Ajouter &agrave; ma liste</a>
+<section class="container col-8">
+    <div class="row row-cols-1 row-cols-md-3 g-4" *ngIf="film">
+        <div class="col" *ngFor="let film of films">
+            <div class="card h-50">
+                <img src="{{ film.image }}" class="card-img-top" alt="{{ film.image }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ film.titre }}</h5>
+                    <p class="card-text">{{ film.genre }}</p>
+                    <p class="card-text">{{ film.annee }}</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn" (click)=" addFilms(film) ">Ajouter à ma liste</button>
                 </div>
             </div>
         </div>
+    </div>
+    <div *ngIf="!films">
+        <p>Aucun films à vous présenter</p>
     </div>
 </section>

@@ -23,4 +23,9 @@ export class FilmComponent implements OnInit {
     })
   }
 
+  addFilms(film: Film){
+    this.fs.addToMesFilms(film);
+    window.alert('Votre film a été ajouté!');
+  }
+
 }
