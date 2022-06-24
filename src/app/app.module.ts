@@ -13,6 +13,7 @@ import { ConnexionComponent } from './components/connexion/connexion.component';
 import { InscriptionComponent } from './components/inscription/inscription.component';
 import { FormsModule } from '@angular/forms';
 import { AuthInterceptor } from './services/auth.interceptor';
+import { AProposComponent } from './components/a-propos/a-propos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { AuthInterceptor } from './services/auth.interceptor';
     MesFilmsComponent,
     ConnexionComponent,
     InscriptionComponent,
+    AProposComponent,
 
   ],
   imports: [
