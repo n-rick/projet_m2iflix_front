@@ -23,13 +23,14 @@ export class ConnexionComponent implements OnInit {
   connexion() {
     this.as.login(this.user).subscribe({
       next: res => {
+        localStorage.setItem('usEmail', this.user.email?? "");
         if (res.token != null) {
           localStorage.setItem('tokm2iflix', res.token);
           this.router.navigateByUrl('/films');
         }
       },
       error: res => {
-        this.error = res.message;
+        this.error = "erreur au niveau de l' authentification! Veuillez recommencez";
       }
     });
   }

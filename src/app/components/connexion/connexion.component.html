@@ -2,9 +2,9 @@
     <div class="col-6 mx-auto">
         <form #monFormLogin="ngForm" (ngSubmit)="connexion()">
             <h2 class="h3 mb-3 fw-normal">Connectez vous</h2>
+            <span class="card text-white bg-danger" *ngIf="error">{{ error }}</span>
 
             <div class="form-floating m-2">
-                <span *ngIf="error">{{ error }}</span>
                 <input type="email" class="form-control" id="email" name="email" placeholder="mon.mail@mail.com" [(ngModel)]="user.email" required>
                 <label for="email">Votre adresse mail</label>
             </div>
