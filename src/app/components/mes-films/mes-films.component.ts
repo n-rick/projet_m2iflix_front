@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Film } from 'src/app/interfaces/film';
+import { FilmService } from 'src/app/services/film.service';
 
 @Component({
   selector: 'app-mes-films',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MesFilmsComponent implements OnInit {
 
-  constructor() { }
+  films = this.fs.getFilm();
+
+  constructor(private fs: FilmService) { }
 
   ngOnInit(): void {
   }

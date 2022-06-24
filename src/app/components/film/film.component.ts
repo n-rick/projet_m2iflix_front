@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Film } from 'src/app/interfaces/film';
+import { User } from 'src/app/interfaces/user';
 import { FilmService } from 'src/app/services/film.service';
 
 @Component({
@@ -17,6 +18,7 @@ export class FilmComponent implements OnInit {
   ngOnInit(): void {
     this.initFilm();
   }
+  
   initFilm(){
     this.fs.getAllFilms().subscribe(res => {
       this.films = res;
